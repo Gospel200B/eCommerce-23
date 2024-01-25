@@ -1,4 +1,4 @@
-let footWear = [
+let Clothes = [
   {
     name: "Sneakers",
     price: 5000,
@@ -18,14 +18,14 @@ let footWear = [
   },
 ];
 
-function listFootwear(){
-    footWear.forEach((footwear, index) => {
-        console.log(`${index+1}. ${footwear.name} ----- ${footwear.price}`)
+function listClothes(){
+    Clothes.forEach((clothes, index) => {
+        console.log(`${index+1}. ${clothes.name} ----- ${clothes.price}`)
     })
 }
 
 function calPrice(){
-    const totalPrice = footWear.map(item => ({
+    const totalPrice = Clothes.map(item => ({
         name : item.name,
         totalPrice : item.price * item.count
     }) )
@@ -34,16 +34,16 @@ function calPrice(){
 
 
 function buyProduct(index){
-    let footwear = footWear[index];
+    let clothes = Clothes[index];
 
 
-    if(footwear){
-        console.log(`you successfully purchased ${footwear.name} at the price of ${footwear.price}`)
+    if(clothes){
+        console.log(`you successfully purchased ${clothes.name} at the price of ${clothes.price}`)
     }else{ 
     console.log("Invalid product")
  }
 }
 
-listFootwear()
+listClothes()
 calPrice()
-buyProduct(1)
+buyProduct(2)
